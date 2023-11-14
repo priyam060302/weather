@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Weather/style.css">
     <title>weather App</title>
 </head>
 
@@ -12,23 +12,23 @@
     <div class="card">
         <div class="search">
             <input type="text" placeholder="Enter place">
-            <button type="button"><img src="images/search.png"></button>
+            <button type="button"><img src="Weather/images/search.png"></button>
         </div>
         <div class="weather-info">
-            <img src="images/rain.png" class="weather-icon">
+            <img src="Weather/images/rain.png" class="weather-icon">
             <h1 class="temp">19<sup>o</sup>c</h1>
             <h2 class="city">Assam</h2>
             <div class="details">
                 <div class="row">
                     <div class="col-1">
-                        <img src="images/humidity.png" class="humid-icon" alt="">
+                        <img src="Weather/images/humidity.png" class="humid-icon" alt="">
                         <div>
                             <h3 class="humid">93 %</h3>
                             <p>Humidity</p>
                         </div>
                     </div>
                     <div class="col-1">
-                        <img src="images/wind.png" alt="">
+                        <img src="Weather/images/wind.png" alt="">
                         <div>
                             <h3 class="wind">1 km/h</h3>
                             <p>Wind Speed</p>
@@ -55,22 +55,22 @@
             document.querySelector(".wind").innerHTML = Math.round(data.wind.speed) + "km/h";
 
             if (data.weather[0].main == "Clouds") {
-                weatherIcon.src = "images/clouds.png";
+                weatherIcon.src = "Weather/images/clouds.png";
             }
             else if (data.weather[0].main == "Clear") {
-                weatherIcon.src = "images/clear.png"
+                weatherIcon.src = "Weather/images/clear.png"
             }
             else if (data.weather[0].main == "Rain") {
-                weatherIcon.src = "images/rain.png"
+                weatherIcon.src = "Weather/images/rain.png"
             }
             else if (data.weather[0].main == "Drizzle") {
-                weatherIcon.src = "images/drizzle.png"
+                weatherIcon.src = "Weather/images/drizzle.png"
             }
             else if (data.weather[0].main == "Mist") {
-                weatherIcon.src = "images/mist.png"
+                weatherIcon.src = "Weather/images/mist.png"
             }
             else if (data.weather[0].main == "Snow") {
-                weatherIcon.src = "images/snow.png"
+                weatherIcon.src = "Weather/images/snow.png"
             }
 
             document.querySelector(".weather-info").style.display = "block";
